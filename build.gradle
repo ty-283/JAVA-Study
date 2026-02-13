@@ -12,8 +12,14 @@ java {
 	toolchain {
 		languageVersion = JavaLanguageVersion.of(21)
 	}
-}
 
+	configurations {
+		complileOnly{
+			extendsFrom annotationProcessor
+		}
+	}
+}
+ 
 repositories {
 	mavenCentral()
 }
@@ -24,6 +30,9 @@ dependencies {
 	//Apache commons lang 便利機能　ユーティリティ
 	implementation 'org.apache.commons:commons-lang3:3.14.0'
 
+	//Lombok
+	compileOnly 'org.projectlombok:lombok'
+	annotationProcessor 'org.projectlombok:lombok'
 	//MySQLドライバ
 	runtimeOnly 'com.mysql:mysql-connector-j'
 
