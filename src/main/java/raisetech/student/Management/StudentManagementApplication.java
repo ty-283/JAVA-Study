@@ -6,29 +6,21 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
+import raisetech.student.Management.Repository.StudentCourseRepository;
+import raisetech.student.Management.Repository.StudentRepository;
+import raisetech.student.Management.data.Student;
+import raisetech.student.Management.data.Student_Course;
 
 @SpringBootApplication
 @RestController
 public class StudentManagementApplication {
-
-  @Autowired
-  private StudentCourseRepository repository;
 
 
   public static void main(String[] args) {
     SpringApplication.run(StudentManagementApplication.class, args);
   }
 
-  @GetMapping("/studentCourseList")
-  public List<Student_Course> getstudenCourseList(){
-  List<Student_Course> list = repository.search(  );
-
-    System.out.println("--- 取得データ一覧 ---");
-    list.forEach(course -> {
-      System.out.println("ID: " + course.getId() + ", コース名: " + course.getCourse_name());
-    });
-
-    return list;
-  }
-
 }
+
+
+
