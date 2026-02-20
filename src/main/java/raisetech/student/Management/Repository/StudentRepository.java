@@ -1,13 +1,10 @@
 package raisetech.student.Management.Repository;
 
 import java.util.List;
-import org.apache.ibatis.annotations.Delete;
-import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
-import org.apache.ibatis.annotations.Update;
 import raisetech.student.Management.data.Student;
-import raisetech.student.Management.data.Student_Course;
+import raisetech.student.Management.data.StudentsCourses;
 
 /**
  * 受講生情報を扱うリポジトリ。
@@ -28,7 +25,7 @@ public interface StudentRepository {
 
 
   @Select("SELECT * FROM students_courses")
-  List<Student_Course> searchStudent_Course();
+  List<StudentsCourses> searchStudent_Course();
 
 }
 
