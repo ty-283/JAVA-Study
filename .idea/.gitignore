@@ -8,5 +8,9 @@
 /dataSources.local.xml
 # エディターベースの HTTP クライアントリクエスト
 /httpRequests/
+
 .gradle/
+
 build/
+
+.idea/
